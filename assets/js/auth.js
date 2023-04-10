@@ -33,7 +33,7 @@ const createacctbtn = document.getElementById('create-acct-btn')
 
 var email, password, signupEmail, signupPassword;
 
-var modal = document.getElementById('myBtn')
+var modal = document.getElementById('myBtn1')
 var profile = document.getElementById('profile')
 
 
@@ -47,6 +47,7 @@ onAuthStateChanged(auth, (user) => {
     profile.style.display = 'block'
     // ...
   } else {
+    
     // User is signed out
     // ...
   }
@@ -96,6 +97,7 @@ createacctbtn.addEventListener('click', function () {
         const user = userCredential.user
         // ...
         window.alert('Success! Account created.')
+        window.location.reload();
       })
       .catch((error) => {
         const errorCode = error.code
@@ -118,6 +120,7 @@ submitButton.addEventListener('click', function () {
       const user = userCredential.user
       console.log('Success! Welcome back!')
       window.alert('Success! Welcome back!')
+      window.location.reload();
       // ...
     })
     .catch((error) => {
@@ -130,10 +133,10 @@ submitButton.addEventListener('click', function () {
 
 signupButton.addEventListener('click', function () {
   main.style.display = 'none'
-  createacct.style.display = 'block'
+  createacctbtn.style.display = 'block'
 })
 
 returnBtn.addEventListener('click', function () {
   main.style.display = 'block'
-  createacct.style.display = 'none'
+  createacctbtn.style.display = 'none'
 })

@@ -159,6 +159,13 @@ body {
 ::-webkit-scrollbar-thumb:hover { background: hsla(219, 14%, 60%, 0.5); }
 
 
+.addbtn{
+  background-color: #1A9DF4;
+  padding: 12px;
+  font-size: 14px;
+  border-radius: 10px;
+  color: white;
+}
 
 
 
@@ -697,7 +704,7 @@ button, a { transition: var(--transition); }
 
 
 /*-----------------------------------*\
-  #BLOG
+  #Review
 \*-----------------------------------*/
 
 .blog .section-title { margin-bottom: 30px; }
